@@ -1,0 +1,169 @@
+{
+  "base_dir": ".",
+  "output_dir": "./reports",
+  "mappings_file": "./project_mappings.json",
+  "exclude_dirs": [
+    "node_modules",
+    "venv",
+    ".venv",
+    "__pycache__",
+    ".git",
+    "dist",
+    "build",
+    ".next",
+    "target",
+    ".idea",
+    ".vscode"
+  ],
+  "security": {
+    "credential_patterns": {
+      "github_token": "ghp_[a-zA-Z0-9]{36}",
+      "openai_key": "sk-proj-[a-zA-Z0-9_-]{48,}",
+      "anthropic_key": "sk-ant-[a-zA-Z0-9_-]{40,}",
+      "spotify_token": "BQ[a-zA-Z0-9_-]{100,}",
+      "jwt_token": "eyJ[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+",
+      "api_key": "api[_-]?key[\"']?\\s*[:=]\\s*[\"']([a-zA-Z0-9_-]{20,})",
+      "password": "password[\"']?\\s*[:=]\\s*[\"']([^\"']{8,})",
+      "secret": "secret[\"']?\\s*[:=]\\s*[\"']([^\"']{20,})"
+    },
+    "sensitive_files": [
+      ".env",
+      ".env.local",
+      ".env.production",
+      "credentials.json",
+      ".credentials.json",
+      "auth.json",
+      "secrets.json",
+      "id_rsa",
+      "id_ed25519",
+      "*.pem",
+      "*.key",
+      ".passwords.txt",
+      "database.sql",
+      "dump.sql"
+    ],
+    "code_extensions": [
+      ".py",
+      ".js",
+      ".ts",
+      ".jsx",
+      ".tsx",
+      ".java",
+      ".go",
+      ".rs",
+      ".rb",
+      ".php",
+      ".sh",
+      ".bash",
+      ".yml",
+      ".yaml",
+      ".json",
+      ".toml",
+      ".env",
+      ".config"
+    ]
+  },
+  "classification": {
+    "backup_keywords": [
+      "backup",
+      "bak",
+      "old",
+      "snapshot",
+      "save",
+      "archive",
+      "ancien",
+      ".old"
+    ],
+    "main_files": [
+      "main.py",
+      "index.js",
+      "index.ts",
+      "app.py",
+      "server.py",
+      "main.go",
+      "main.rs",
+      "App.java"
+    ],
+    "min_functionality_score": 3,
+    "safe_functionality_score": 5
+  },
+  "cleanup": {
+    "ai_cache_directories": [
+      ".claude",
+      ".codex",
+      ".cursor",
+      ".aider"
+    ],
+    "files_to_remove": [
+      "agent.md",
+      "CLAUDE.md"
+    ]
+  },
+  "ascii_cleanup": {
+    "ignore_dirs": [
+      "node_modules",
+      ".git",
+      "venv",
+      "__pycache__",
+      ".idea",
+      ".vscode"
+    ],
+    "ignore_files": [
+      "package-lock.json"
+    ],
+    "binary_extensions": [
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".gif",
+      ".ico",
+      ".webp",
+      ".mp3",
+      ".mp4",
+      ".avi",
+      ".mov",
+      ".pdf",
+      ".zip",
+      ".tar",
+      ".gz",
+      ".exe",
+      ".dll",
+      ".so",
+      ".dylib"
+    ]
+  },
+  "gitignore_template": [
+    "# Dependencies",
+    "node_modules/",
+    "venv/",
+    ".venv/",
+    "__pycache__/",
+    "*.pyc",
+    "",
+    "# Environment",
+    ".env",
+    ".env.local",
+    ".env.*.local",
+    "",
+    "# IDE",
+    ".idea/",
+    ".vscode/",
+    "*.swp",
+    "*.swo",
+    "",
+    "# Build",
+    "dist/",
+    "build/",
+    "*.egg-info/",
+    "",
+    "# AI Cache",
+    ".claude/",
+    ".codex/",
+    ".cursor/",
+    ".aider/",
+    "",
+    "# OS",
+    ".DS_Store",
+    "Thumbs.db"
+  ]
+}

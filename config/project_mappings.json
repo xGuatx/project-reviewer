@@ -1,0 +1,27 @@
+{
+  "renamings": {
+    "example-old-name": "example-new-descriptive-name"
+  },
+  "splits": {
+    "example-container": {
+      "new-subproject-1": {
+        "files": ["file1.yml", "file2.yml"],
+        "description": "Description of this split project"
+      },
+      "new-subproject-2": {
+        "files": ["other-file.yml"],
+        "description": "Description of another split project"
+      }
+    }
+  },
+  "merges": {
+    "target-project": ["source-project-1", "source-project-2"]
+  },
+  "do_not_publish": [
+    "private-project",
+    "backup-data"
+  ],
+  "notes": {
+    "example-project": "Special handling notes for this project"
+  }
+}
